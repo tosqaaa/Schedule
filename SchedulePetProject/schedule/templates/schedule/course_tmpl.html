@@ -1,0 +1,18 @@
+<div class="container">
+    <div class="row">
+        {%for group in course_groups%}
+        <div class="col">
+            <div class="card mt-5">
+                <div class="card-body" style="width: 20rem">
+                    <h5 class="card-title">{{group.title}}</h5>
+                    <p class="card-text">Расписание</p>
+                    <div class="btn-group" role="group" aria-label="Basic example">
+                        <a href="{{group.get_absolute_url}}" class="btn btn-primary">Расписание</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        {%endfor%}
+    </div>
+</div>

@@ -1,0 +1,15 @@
+{%extends 'base.html'%}
+{% load courses%}
+
+{%block TITLE%}
+{{title}} :: {{block.super}}
+{%endblock%}
+
+
+{%block CONTENT%}
+{%for course in courses %}
+<h1 class="mt-5 text-center">{{course}} курс</h1>
+{%show_course_groups forloop.counter%}
+{%endfor%}
+
+{%endblock%}
